@@ -1,127 +1,122 @@
 {
-  "name": "vietnam-provinces-js",
-  "version": "2.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 63 provinces, 696 districts, and 10,051 communes with lazy loading and O(1) lookups.",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./provinces": {
-      "types": "./dist/provinces.d.ts",
-      "import": "./dist/provinces.mjs",
-      "require": "./dist/provinces.js"
-    },
-    "./districts": {
-      "types": "./dist/districts.d.ts",
-      "import": "./dist/districts.mjs",
-      "require": "./dist/districts.js"
-    },
-    "./communes": {
-      "types": "./dist/communes.d.ts",
-      "import": "./dist/communes.mjs",
-      "require": "./dist/communes.js"
-    },
-    "./utils": {
-      "types": "./dist/utils.d.ts",
-      "import": "./dist/utils.mjs",
-      "require": "./dist/utils.js"
-    },
-    "./cache": {
-      "types": "./dist/cache.d.ts",
-      "import": "./dist/cache.mjs",
-      "require": "./dist/cache.js"
-    },
-    "./autocomplete": {
-      "types": "./dist/autocomplete.d.ts",
-      "import": "./dist/autocomplete.mjs",
-      "require": "./dist/autocomplete.js"
-    },
-    "./hierarchy": {
-      "types": "./dist/hierarchy.d.ts",
-      "import": "./dist/hierarchy.mjs",
-      "require": "./dist/hierarchy.js"
-    },
-    "./batch": {
-      "types": "./dist/batch.d.ts",
-      "import": "./dist/batch.mjs",
-      "require": "./dist/batch.js"
-    },
-    "./analytics": {
-      "types": "./dist/analytics.d.ts",
-      "import": "./dist/analytics.mjs",
-      "require": "./dist/analytics.js"
-    },
-    "./validation": {
-      "types": "./dist/validation.d.ts",
-      "import": "./dist/validation.mjs",
-      "require": "./dist/validation.js"
-    },
-    "./export": {
-      "types": "./dist/export.d.ts",
-      "import": "./dist/export.mjs",
-      "require": "./dist/export.js"
-    },
-    "./fuzzy": {
-      "types": "./dist/fuzzy.d.ts",
-      "import": "./dist/fuzzy.mjs",
-      "require": "./dist/fuzzy.js"
-    }
-  },
-  "devDependencies": {
-    "@types/natural-compare": "^1.4.3",
-    "@types/similarity": "^1.2.3",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.2",
-    "prettier": "^3.3.3",
-    "vitest": "^3.0.8"
-  },
-  "dependencies": {
-    "natural-compare": "^1.4.0",
-    "remove-accents": "^0.5.0",
-    "similarity": "^1.2.1"
-  },
-  "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "format": "prettier --check --ignore-path .gitignore . --write"
-  },
-  "keywords": [
-    "vietnam",
-    "provinces",
-    "districts",
-    "communes",
-    "administrative",
-    "geography",
-    "search",
-    "autocomplete",
-    "validation",
-    "analytics",
-    "export",
-    "fuzzy-search",
-    "typescript",
-    "performance",
-    "lazy-loading",
-    "tree-shaking"
-  ],
-  "author": "tnmod",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tnmod/vietnam-provinces-js"
-  },
-  "bugs": {
-    "url": "https://github.com/tnmod/vietnam-provinces-js/issues"
-  },
-  "homepage": "https://github.com/tnmod/vietnam-provinces-js#readme",
-  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+	"name": "vietnam-provinces-js",
+	"version": "2.0.0",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 63 provinces, 696 districts, and 10,051 communes with lazy loading and O(1) lookups.",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		},
+		"./provinces": {
+			"types": "./dist/provinces.d.ts",
+			"import": "./dist/provinces.mjs",
+			"require": "./dist/provinces.js"
+		},
+		"./wards": {
+			"types": "./dist/wards.d.ts",
+			"import": "./dist/wards.mjs",
+			"require": "./dist/wards.js"
+		},
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"import": "./dist/utils.mjs",
+			"require": "./dist/utils.js"
+		},
+		"./cache": {
+			"types": "./dist/cache.d.ts",
+			"import": "./dist/cache.mjs",
+			"require": "./dist/cache.js"
+		},
+		"./autocomplete": {
+			"types": "./dist/autocomplete.d.ts",
+			"import": "./dist/autocomplete.mjs",
+			"require": "./dist/autocomplete.js"
+		},
+		"./hierarchy": {
+			"types": "./dist/hierarchy.d.ts",
+			"import": "./dist/hierarchy.mjs",
+			"require": "./dist/hierarchy.js"
+		},
+		"./batch": {
+			"types": "./dist/batch.d.ts",
+			"import": "./dist/batch.mjs",
+			"require": "./dist/batch.js"
+		},
+		"./analytics": {
+			"types": "./dist/analytics.d.ts",
+			"import": "./dist/analytics.mjs",
+			"require": "./dist/analytics.js"
+		},
+		"./validation": {
+			"types": "./dist/validation.d.ts",
+			"import": "./dist/validation.mjs",
+			"require": "./dist/validation.js"
+		},
+		"./export": {
+			"types": "./dist/export.d.ts",
+			"import": "./dist/export.mjs",
+			"require": "./dist/export.js"
+		},
+		"./fuzzy": {
+			"types": "./dist/fuzzy.d.ts",
+			"import": "./dist/fuzzy.mjs",
+			"require": "./dist/fuzzy.js"
+		}
+	},
+	"devDependencies": {
+		"@types/natural-compare": "^1.4.3",
+		"@types/similarity": "^1.2.3",
+		"tsup": "^8.4.0",
+		"typescript": "^5.8.2",
+		"prettier": "^3.3.3",
+		"vitest": "^3.0.8"
+	},
+	"dependencies": {
+		"natural-compare": "^1.4.0",
+		"remove-accents": "^0.5.0",
+		"similarity": "^1.2.1"
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"format": "prettier --check --ignore-path .gitignore . --write"
+	},
+	"keywords": [
+		"vietnam",
+		"provinces",
+		"districts",
+		"communes",
+		"administrative",
+		"geography",
+		"search",
+		"autocomplete",
+		"validation",
+		"analytics",
+		"export",
+		"fuzzy-search",
+		"typescript",
+		"performance",
+		"lazy-loading",
+		"tree-shaking"
+	],
+	"author": "tnmod",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tnmod/vietnam-provinces-js"
+	},
+	"bugs": {
+		"url": "https://github.com/tnmod/vietnam-provinces-js/issues"
+	},
+	"homepage": "https://github.com/tnmod/vietnam-provinces-js#readme",
+	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }

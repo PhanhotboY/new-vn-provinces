@@ -4,8 +4,7 @@ export default defineConfig({
 	entry: {
 		index: 'src/index.ts',
 		provinces: 'src/provinces/index.ts',
-		districts: 'src/districts/index.ts',
-		communes: 'src/communes/index.ts',
+		wards: 'src/wards/index.ts',
 		utils: 'src/utils/index.ts',
 		cache: 'src/cache/index.ts',
 		autocomplete: 'src/features/autocomplete.ts',
@@ -22,8 +21,7 @@ export default defineConfig({
 		entry: {
 			index: 'src/index.ts',
 			provinces: 'src/provinces/index.ts',
-			districts: 'src/districts/index.ts',
-			communes: 'src/communes/index.ts',
+			wards: 'src/wards/index.ts',
 			utils: 'src/utils/index.ts',
 			cache: 'src/cache/index.ts',
 			autocomplete: 'src/features/autocomplete.ts',

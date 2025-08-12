@@ -3,7 +3,33 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [3.0.0] - 2025-08-12
+
+### 🔄 Data Updates
+
+- **Updated provinces and wards** after administrative merging
+- **Complete Vietnam administrative data** with 34 provinces and 3321 wards
+- **Data accuracy improvements** reflecting current administrative divisions
+- **Enhanced data integrity** with updated validation rules
+
+### 🏆 Production Ready Features
+
+- **Enterprise-grade performance** and reliability
+- **Comprehensive coverage** of all Vietnam administrative divisions
+- **Well-tested codebase** with extensive test coverage
+- **TypeScript support** with full type definitions
+
+### 📚 Documentation Improvements
+
+- **Complete README overhaul** with detailed examples
+- **Performance benchmarks** and comparison tables
+- **Migration guides** for seamless version upgrades
+- **Additional resource links** including performance and optimization guides
+
+---
 
 ## [2.0.0] - 2024-12-19
 
@@ -18,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🆕 New Advanced Features
 
 #### Analytics & Statistics
+
 - `getProvinceStats()` - Detailed province statistics
 - `getNationalStats()` - National overview and insights
 - `getRegionStats()` - Regional breakdown (North/Central/South)
@@ -26,6 +53,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `getDistrictDistribution()` - Statistical distribution analysis
 
 #### Validation & Verification
+
 - `validateProvinceId()` - Province ID validation
 - `validateDistrictId()` - District ID validation
 - `validateCommuneId()` - Commune ID validation
@@ -35,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `validateAddressFormat()` - Format pattern validation
 
 #### Multi-Format Export
+
 - `exportProvinces()` - Export provinces in JSON/CSV/XML/SQL
 - `exportDistricts()` - Export districts in multiple formats
 - `exportCommunes()` - Export communes in multiple formats
@@ -42,6 +71,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `exportHierarchicalData()` - Export hierarchical structures
 
 #### Advanced Fuzzy Search
+
 - `fuzzySearchProvinces()` - Advanced province search with scoring
 - `fuzzySearchDistricts()` - Advanced district search
 - `fuzzySearchCommunes()` - Advanced commune search
@@ -50,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `suggestCorrections()` - Smart correction suggestions
 
 #### Enhanced Hierarchy Navigation
+
 - `getProvinceWithDistricts()` - Province with all districts
 - `getDistrictWithCommunes()` - District with all communes
 - `getFullHierarchy()` - Complete hierarchical data
@@ -60,6 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `validateAddressHierarchy()` - Validate hierarchical relationships
 
 #### Batch Operations
+
 - `getProvincesBatch()` - Get multiple provinces efficiently
 - `getDistrictsBatch()` - Get multiple districts efficiently
 - `getCommunesBatch()` - Get multiple communes efficiently
@@ -67,6 +99,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `getProvinceStatsBatch()` - Get statistics for multiple provinces
 
 #### Smart Autocomplete
+
 - `getProvinceAutocomplete()` - Province autocomplete with scoring
 - `getDistrictAutocomplete()` - District autocomplete
 - `getCommuneAutocomplete()` - Commune autocomplete
@@ -75,21 +108,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🔧 Core Optimizations
 
 #### Lazy Loading System
+
 - Data loaded only when needed
 - Separate loading for provinces, districts, communes
 - Intelligent caching prevents re-loading
 
 #### O(1) Lookup Operations
+
 - Hash map indexing for all ID-based operations
 - Hierarchical maps for parent-child relationships
 - Pre-computed search indexes
 
 #### Memoization & Caching
+
 - Expensive operations cached automatically
 - Search results memoized
 - Sorted lists cached permanently
 
 #### Tree-Shaking Support
+
 - Modular exports for selective imports
 - Only load what you actually use
 - Optimized bundle splitting
@@ -97,6 +134,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 💥 Breaking Changes
 
 #### All Functions Now Async
+
 ```typescript
 // Before (v1.x)
 const provinces = getAllProvince();
@@ -108,6 +146,7 @@ const district = await getDistrictById('001');
 ```
 
 #### Modular Imports Recommended
+
 ```typescript
 // ✅ Recommended - Tree-shakable
 import { getAllProvince } from 'vietnam-provinces-js/provinces';
@@ -157,6 +196,7 @@ For users upgrading from v1.x:
 ### 📈 Performance Benchmarks
 
 Real-world performance results from demo:
+
 - Hanoi Statistics: 816ms (first load) → 0.4ms (cached)
 - National Statistics: 0.41ms (after initial load)
 - Address Validation: 0.418ms
@@ -169,11 +209,13 @@ Real-world performance results from demo:
 ## [1.1.2] - Previous Version
 
 ### Features
+
 - Basic province, district, commune data access
 - Simple search functionality
 - TypeScript support
 
 ### Performance
+
 - Linear search algorithms
 - All data loaded immediately
 - No caching or optimization

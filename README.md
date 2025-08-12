@@ -1,6 +1,9 @@
 # 🇻🇳 Vietnam Provinces JS
 
-**Vietnam Provinces JS** is a high-performance JavaScript/TypeScript library that provides a comprehensive list of provinces, districts, and communes in Vietnam. It features advanced search capabilities, autocomplete, hierarchical data navigation, and optimized performance with lazy loading and caching.
+**Vietnam Provinces JS** is a high-performance JavaScript/TypeScript library
+that provides a comprehensive list of provinces and wards in Vietnam. It
+features advanced search capabilities, autocomplete, hierarchical data
+navigation, and optimized performance with lazy loading and caching.
 
 [![NPM Version](https://img.shields.io/npm/v/vietnam-provinces-js)](https://www.npmjs.com/package/vietnam-provinces-js)
 [![License](https://img.shields.io/npm/l/vietnam-provinces-js)](https://github.com/tnmod/vietnam-provinces-js/blob/main/LICENSE)
@@ -35,11 +38,13 @@ yarn add vietnam-provinces-js
 ## 🚀 **Features Overview**
 
 ### Core Functions (All Async)
-- **Provinces:** `getAllProvince()`, `searchProvinceByName()`, `getDistrictsByProvinceId()`, `isValidProvinceId()`
-- **Districts:** `getAllDistricts()`, `searchDistrictByName()`, `getDistrictById()`, `getCommunesByDistrictId()`
-- **Communes:** `getAllCommunes()`, `searchCommuneByName()`, `getCommuneById()`
+
+- **Provinces:** `getAllProvince()`, `searchProvinceByName()`,
+  `getWardsByProvinceId()`, `isValidProvinceId()`
+- **Wards:** `getAllWards()`, `searchWardByName()`, `getWardById()`
 
 ### 🆕 New Advanced Features
+
 - **🔍 Autocomplete:** Smart suggestions with scoring algorithm
 - **🏗️ Hierarchy:** Navigate through administrative levels
 - **📦 Batch Operations:** Process multiple items efficiently
@@ -54,77 +59,63 @@ yarn add vietnam-provinces-js
 ## 🛠️ **Available Methods**
 
 ### **🌍 Province Methods**
-| Function | Description |
-|----------|-------------|
-| `getAllProvince()` | Get a list of all provinces |
-| `getAllProvincesSorted()` | Get a list of all provinces sorted alphabetically |
-| `getDistrictsByProvinceId(provinceId: string)` | Get a list of districts within a specific province |
-| `isValidProvinceId(provinceId: string)` | Check if a province ID is valid |
-| `searchProvinceByName(name: string)` | Search for a province by name (fuzzy search) |
+
+| Function                                   | Description                                       |
+| ------------------------------------------ | ------------------------------------------------- |
+| `getAllProvince()`                         | Get a list of all provinces                       |
+| `getAllProvincesSorted()`                  | Get a list of all provinces sorted alphabetically |
+| `getWardsByProvinceId(provinceId: string)` | Get a list of wards within a specific province    |
+| `isValidProvinceId(provinceId: string)`    | Check if a province ID is valid                   |
+| `searchProvinceByName(name: string)`       | Search for a province by name (fuzzy search)      |
 
 #### 📌 **Example Usage**
+
 ```ts
-import { getAllProvince, searchProvinceByName } from "vietnam-provinces-js/provinces";
+import {
+	getAllProvince,
+	searchProvinceByName,
+} from 'vietnam-provinces-js/provinces';
 
 // All functions are now async
 const provinces = await getAllProvince();
 console.log(provinces);
 
-const results = await searchProvinceByName("hanoi");
+const results = await searchProvinceByName('hanoi');
 console.log(results);
 ```
+
 📌 **Output:**
+
 ```json
 [{ "idProvince": "01", "name": "Thành phố Hà Nội" }]
 ```
 
 ---
 
-### **🏙️ District Methods**
-| Function | Description |
-|----------|-------------|
-| `getAllDistricts()` | Get a list of all districts |
-| `getDistrictById(districtId: string)` | Get details of a district by ID |
-| `getCommunesByDistrictId(districtId: string)` | Get a list of communes within a district |
-| `searchDistrictByName(name: string)` | Search for a district by name (fuzzy search) |
+### **�️ Ward Methods**
+
+| Function                         | Description                              |
+| -------------------------------- | ---------------------------------------- |
+| `getAllWards()`                  | Get a list of all wards                  |
+| `getWardById(wardId: string)`    | Get details of a ward by ID              |
+| `searchWardByName(name: string)` | Search for a ward by name (fuzzy search) |
 
 #### 📌 **Example Usage**
+
 ```ts
-import { getAllDistricts, getDistrictById } from "vietnam-provinces-js/districts";
+import { getAllWards, getWardById } from 'vietnam-provinces-js/wards';
 
-const districts = await getAllDistricts();
-console.log(districts);
+const wards = await getAllWards();
+console.log(wards);
 
-const district = await getDistrictById("001");
-console.log(district);
+const ward = await getWardById('26734');
+console.log(ward);
 ```
+
 📌 **Output:**
+
 ```json
-{ "idProvince": "01", "idDistrict": "001", "name": "Ba Đình District" }
-```
-
----
-
-### **🏡 Commune Methods**
-| Function | Description |
-|----------|-------------|
-| `getAllCommunes()` | Get a list of all communes |
-| `getCommuneById(communeId: string)` | Get details of a commune by ID |
-| `searchCommuneByName(name: string)` | Search for a commune by name (fuzzy search) |
-
-#### 📌 **Example Usage**
-```ts
-import { getAllCommunes, getCommuneById } from "vietnam-provinces-js/communes";
-
-const communes = await getAllCommunes();
-console.log(communes);
-
-const commune = await getCommuneById("00001");
-console.log(commune);
-```
-📌 **Output:**
-```json
-{ "idDistrict": "001", "idCommune": "00001", "name": "Phúc Xá Ward" }
+{ "idProvince": "01", "idWard": "26734", "name": "Phường Phúc Xá" }
 ```
 
 ---
@@ -137,15 +128,18 @@ Smart autocomplete with scoring algorithm for better user experience:
 
 ```ts
 import {
-  getProvinceAutocomplete,
-  getDistrictAutocomplete,
-  getCommuneAutocomplete,
-  getUniversalAutocomplete
-} from "vietnam-provinces-js/autocomplete";
+	getProvinceAutocomplete,
+	getWardAutocomplete,
+	getUniversalAutocomplete,
+} from 'vietnam-provinces-js/features/autocomplete';
 
 // Province autocomplete
 const suggestions = await getProvinceAutocomplete('Hà', 5);
 // Returns: [{ type: 'province', id: '01', name: 'Thành phố Hà Nội', score: 95 }]
+
+// Ward autocomplete
+const wardSuggestions = await getWardAutocomplete('Phúc', '01', 5);
+// Returns: [{ type: 'ward', id: '26734', name: 'Phường Phúc Xá', parentName: 'Thành phố Hà Nội', score: 90 }]
 
 // Universal search across all types
 const allSuggestions = await getUniversalAutocomplete('Hà', 10);
@@ -157,26 +151,21 @@ Navigate through the administrative hierarchy efficiently:
 
 ```ts
 import {
-  getProvinceWithDistricts,
-  getDistrictWithCommunes,
-  getFullHierarchy,
-  getAddressPath,
-  getFormattedAddress
-} from "vietnam-provinces-js/hierarchy";
+	getProvinceWithWards,
+	getAddressPath,
+	getFormattedAddress,
+} from 'vietnam-provinces-js/features/hierarchy';
 
-// Get province with all its districts
-const hanoi = await getProvinceWithDistricts('01');
+// Get province with all its wards
+const hanoi = await getProvinceWithWards('01');
 
-// Get full hierarchy (province -> districts -> communes)
-const fullData = await getFullHierarchy('01');
-
-// Get address path for a commune
-const path = await getAddressPath('00001');
-// Returns: { province: {...}, district: {...}, commune: {...} }
+// Get address path for a ward
+const path = await getAddressPath('26734');
+// Returns: { province: {...}, ward: {...} }
 
 // Get formatted address string
-const address = await getFormattedAddress('00001');
-// Returns: "Phường Phúc Xá, Quận Ba Đình, Thành phố Hà Nội"
+const address = await getFormattedAddress('26734');
+// Returns: "Phường Phúc Xá, Thành phố Hà Nội"
 ```
 
 ### **📦 Batch Operations**
@@ -185,18 +174,21 @@ Process multiple items efficiently in a single operation:
 
 ```ts
 import {
-  getProvincesBatch,
-  getDistrictsBatch,
-  getCommunesBatch,
-  getFullAddressesBatch
-} from "vietnam-provinces-js/batch";
+	getProvincesBatch,
+	getWardsBatch,
+	getFullAddressesBatch,
+} from 'vietnam-provinces-js/features/batch';
 
 // Get multiple provinces at once
 const result = await getProvincesBatch(['01', '79', '31']);
 // Returns: { success: [...], failed: [] }
 
-// Get full addresses for multiple communes
-const addresses = await getFullAddressesBatch(['00001', '00004', '00007']);
+// Get multiple wards at once
+const wardResult = await getWardsBatch(['26734', '26737', '26740']);
+// Returns: { success: [...], failed: [] }
+
+// Get full addresses for multiple wards
+const addresses = await getFullAddressesBatch(['26734', '26737', '26740']);
 ```
 
 ### **📊 Analytics & Statistics**
@@ -205,22 +197,22 @@ Get comprehensive insights about Vietnam's administrative data:
 
 ```ts
 import {
-  getProvinceStats,
-  getNationalStats,
-  getRegionStats,
-  getTopProvincesByDistricts
-} from "vietnam-provinces-js/analytics";
+	getProvinceStats,
+	getNationalStats,
+	getRegionStats,
+	getTopProvincesByWards,
+} from 'vietnam-provinces-js/features/analytics';
 
 // Get detailed province statistics
 const hanoiStats = await getProvinceStats('01');
-// Returns: district count, commune count, largest/smallest districts, etc.
+// Returns: ward count, largest/smallest wards, etc.
 
 // Get national overview
 const nationalStats = await getNationalStats();
 // Returns: totals, averages, largest/smallest provinces
 
-// Get top provinces by district count
-const topProvinces = await getTopProvincesByDistricts(5);
+// Get top provinces by ward count
+const topProvinces = await getTopProvincesByWards(5);
 ```
 
 ### **✅ Validation & Verification**
@@ -229,13 +221,13 @@ Validate addresses and get smart suggestions:
 
 ```ts
 import {
-  validateAddressHierarchy,
-  validateAndSuggestAddress,
-  batchValidateAddresses
-} from "vietnam-provinces-js/validation";
+	validateAddressHierarchy,
+	validateAndSuggestAddress,
+	batchValidateAddresses,
+} from 'vietnam-provinces-js/features/validation';
 
-// Validate complete address hierarchy
-const result = await validateAddressHierarchy('01', '001', '00001');
+// Validate complete address hierarchy (province -> ward)
+const result = await validateAddressHierarchy('01', '26734');
 // Returns: validation status, errors, warnings
 
 // Smart validation with suggestions
@@ -252,21 +244,28 @@ Export data in various formats for integration:
 
 ```ts
 import {
-  exportProvinces,
-  exportFlattenedAddresses,
-  exportHierarchicalData
-} from "vietnam-provinces-js/export";
+	exportProvinces,
+	exportWards,
+	exportFlattenedAddresses,
+	exportHierarchicalData,
+} from 'vietnam-provinces-js/features/export';
 
 // Export to different formats
 const jsonData = await exportProvinces({ format: 'json' });
 const csvData = await exportProvinces({ format: 'csv' });
 const xmlData = await exportProvinces({ format: 'xml' });
-const sqlData = await exportProvinces({ format: 'sql', tableName: 'provinces' });
+const sqlData = await exportProvinces({
+	format: 'sql',
+	tableName: 'provinces',
+});
+
+// Export ward data
+const wardData = await exportWards({ format: 'json' });
 
 // Export flattened address data
 const flatData = await exportFlattenedAddresses({
-  format: 'json',
-  filterByProvince: ['01', '79']
+	format: 'json',
+	filterByProvince: ['01', '79'],
 });
 ```
 
@@ -276,22 +275,29 @@ Powerful search with multiple algorithms and scoring:
 
 ```ts
 import {
-  fuzzySearchProvinces,
-  universalFuzzySearch,
-  suggestCorrections
-} from "vietnam-provinces-js/fuzzy";
+	fuzzySearchProvinces,
+	fuzzySearchWards,
+	universalFuzzySearch,
+	suggestCorrections,
+} from 'vietnam-provinces-js/features/fuzzy';
 
 // Advanced fuzzy search with scoring
 const results = await fuzzySearchProvinces('Ha Noi', {
-  threshold: 0.5,
-  maxResults: 10
+	threshold: 0.5,
+	maxResults: 10,
+});
+
+// Fuzzy search for wards
+const wardResults = await fuzzySearchWards('Phuc Xa', {
+	threshold: 0.3,
+	provinceId: '01',
 });
 
 // Universal search across all types
-const universal = await universalFuzzySearch('Quan 1', {
-  threshold: 0.3,
-  filters: { provinceId: '79' },
-  sortBy: 'relevance'
+const universal = await universalFuzzySearch('Phuong Sai Gon', {
+	threshold: 0.3,
+	filters: { provinceId: '79' },
+	sortBy: 'relevance',
 });
 
 // Suggest corrections for misspelled queries
@@ -300,87 +306,93 @@ const corrections = await suggestCorrections('Ha Noi Viet Nam');
 
 ## 📊 **Performance Comparison**
 
-| Operation | Before | After | Improvement |
-|-----------|--------|-------|-------------|
-| Initial Load | 100ms | 10ms | **10x faster** |
-| Get by ID | 50ms | 1ms | **50x faster** |
-| Search | 200ms | 20ms | **10x faster** |
-| Sorted List (cached) | 100ms | 1ms | **100x faster** |
-| Memory Usage | 824KB | ~100KB* | **8x less** |
+| Operation            | Before | After    | Improvement     |
+| -------------------- | ------ | -------- | --------------- |
+| Initial Load         | 100ms  | 10ms     | **10x faster**  |
+| Get by ID            | 50ms   | 1ms      | **50x faster**  |
+| Search               | 200ms  | 20ms     | **10x faster**  |
+| Sorted List (cached) | 100ms  | 1ms      | **100x faster** |
+| Memory Usage         | 824KB  | ~100KB\* | **8x less**     |
 
-*Memory usage depends on which modules are actually used
+\*Memory usage depends on which modules are actually used
 
 ## 🎯 **Migration Guide**
 
 ### Breaking Changes
+
 All functions are now async and return Promises:
 
 ```ts
 // Before (v1.x)
 const provinces = getAllProvince();
-const district = getDistrictById('001');
+const ward = getWardById('00001');
 
 // After (v2.x)
 const provinces = await getAllProvince();
-const district = await getDistrictById('001');
+const ward = await getWardById('00004');
 ```
 
 ## 📚 **Additional Resources**
 
-- 📖 [Performance Guide](./PERFORMANCE_GUIDE.md) - Detailed performance optimizations
-- 🚀 [Optimization Summary](./OPTIMIZATION_SUMMARY.md) - Complete optimization overview
+- 📖 [Performance Guide](./PERFORMANCE_GUIDE.md) - Detailed performance
+  optimizations
+- 🚀 [Optimization Summary](./OPTIMIZATION_SUMMARY.md) - Complete optimization
+  overview
 - 🧪 [Basic Demo](./demo.js) - See core features in action
 - 🎯 [Advanced Demo](./advanced-demo.js) - Showcase all advanced features
-- 🔧 [API Documentation](./docs/) - Complete API reference
 
 ## 🎯 **Quick Start Examples**
 
 ### **Basic Usage**
+
 ```bash
 npm install vietnam-provinces-js
 ```
 
 ```typescript
 import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getDistrictById } from 'vietnam-provinces-js/districts';
+import { getWardById } from 'vietnam-provinces-js/wards';
 
 const provinces = await getAllProvince();
-const district = await getDistrictById('001');
+const ward = await getWardById('26734');
 ```
 
 ### **Advanced Usage**
+
 ```typescript
 // Analytics
-import { getNationalStats } from 'vietnam-provinces-js/analytics';
+import { getNationalStats } from 'vietnam-provinces-js/features/analytics';
 const stats = await getNationalStats();
 
 // Validation
-import { validateAddressHierarchy } from 'vietnam-provinces-js/validation';
-const isValid = await validateAddressHierarchy('01', '001', '00001');
+import { validateAddressHierarchy } from 'vietnam-provinces-js/features/validation';
+const isValid = await validateAddressHierarchy('01', '26734');
 
 // Export
-import { exportProvinces } from 'vietnam-provinces-js/export';
+import { exportProvinces } from 'vietnam-provinces-js/features/export';
 const csvData = await exportProvinces({ format: 'csv' });
 
 // Fuzzy Search
-import { universalFuzzySearch } from 'vietnam-provinces-js/fuzzy';
+import { universalFuzzySearch } from 'vietnam-provinces-js/features/fuzzy';
 const results = await universalFuzzySearch('Ha Noi');
 ```
 
 ## 🏆 **Why Choose This Library?**
 
 - ✅ **Production Ready**: Enterprise-grade performance and reliability
-- ✅ **Comprehensive**: Complete Vietnam administrative data with 63 provinces, 696 districts, 10,051 communes
+- ✅ **Comprehensive**: Complete Vietnam administrative data with 34 provinces
+  and 3321 wards
 - ✅ **High Performance**: 10-100x faster than traditional approaches
 - ✅ **Memory Efficient**: 8x less memory usage with lazy loading
 - ✅ **Developer Friendly**: TypeScript support, comprehensive documentation
 - ✅ **Flexible**: Multiple import options, tree-shaking support
 - ✅ **Feature Rich**: Analytics, validation, export, fuzzy search, and more
-- ✅ **Well Tested**: 61 test cases covering all functionality
+- ✅ **Well Tested**: Comprehensive test coverage for all functionality
 
 ## 📋 **Version History**
 
-- **v2.0.0** (Latest) - Complete performance optimization and advanced features
+- **v3.0.0** (Latest) - Update provinces and wards after merging
+- **v2.0.0** - Complete performance optimization and advanced features
 - **v1.1.2** - Basic functionality with simple search
 
 ## 🔗 **Important Links**
