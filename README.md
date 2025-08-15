@@ -1,5 +1,15 @@
 # 🇻🇳 Vietnam Provinces JS
 
+This package is a fork of
+[vietnam-provinces-js](https://www.npmjs.com/package/vietnam-provinces-js) with
+the following modifications:
+
+- Update provinces and wards after merging following the most recent effective
+  decree:
+  [19/2025/QĐ-TTg](https://thuvienphapluat.vn/van-ban/Bo-may-hanh-chinh/Quyet-dinh-19-2025-QD-TTg-Bang-danh-muc-va-ma-so-cac-don-vi-hanh-chinh-Viet-Nam-663707.aspx)
+
+---
+
 **Vietnam Provinces JS** is a high-performance JavaScript/TypeScript library
 that provides a comprehensive list of provinces and wards in Vietnam. It
 features advanced search capabilities, autocomplete, hierarchical data
