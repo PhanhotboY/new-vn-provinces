@@ -1,7 +1,7 @@
 # 🚀 Performance Guide - Vietnam Provinces JS
 
 This guide explains the performance optimizations and new features added to the
-`vietnam-provinces-js` library.
+`new-vn-provinces` library.
 
 ## 🎯 **Current Version: v3.0.0**
 
@@ -20,7 +20,7 @@ This guide explains the performance optimizations and new features added to the
 
 ```typescript
 // Data is only loaded when you actually use it
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getAllProvince } from 'new-vn-provinces/provinces';
 
 // First call loads and caches data
 const provinces = await getAllProvince(); // ~50ms
@@ -77,7 +77,7 @@ import {
 	getProvinceAutocomplete,
 	getWardAutocomplete,
 	getUniversalAutocomplete,
-} from 'vietnam-provinces-js/autocomplete';
+} from 'new-vn-provinces/autocomplete';
 
 // Province autocomplete
 const suggestions = await getProvinceAutocomplete('Hà', 5);
@@ -101,7 +101,7 @@ import {
 	getFullHierarchy,
 	getAddressPath,
 	getFormattedAddress,
-} from 'vietnam-provinces-js/hierarchy';
+} from 'new-vn-provinces/hierarchy';
 
 // Get province with all its wards
 const hanoi = await getProvinceWithWards('01');
@@ -127,7 +127,7 @@ import {
 	getProvincesBatch,
 	getWardsBatch,
 	getFullAddressesBatch,
-} from 'vietnam-provinces-js/batch';
+} from 'new-vn-provinces/batch';
 
 // Get multiple provinces at once
 const result = await getProvincesBatch(['01', '79', '31']);
@@ -149,7 +149,7 @@ import {
 	getProvinceStats,
 	getNationalStats,
 	getTopProvincesByWards,
-} from 'vietnam-provinces-js/analytics';
+} from 'new-vn-provinces/analytics';
 
 // Get detailed province statistics
 const hanoiStats = await getProvinceStats('01');
@@ -172,7 +172,7 @@ import {
 	validateAddressHierarchy,
 	validateAndSuggestAddress,
 	batchValidateAddresses,
-} from 'vietnam-provinces-js/validation';
+} from 'new-vn-provinces/validation';
 
 // Validate complete address hierarchy (province -> ward)
 const result = await validateAddressHierarchy('01', '26734');
@@ -196,7 +196,7 @@ import {
 	fuzzySearchWards,
 	universalFuzzySearch,
 	suggestCorrections,
-} from 'vietnam-provinces-js/fuzzy';
+} from 'new-vn-provinces/fuzzy';
 
 // Advanced fuzzy search with scoring
 const results = await fuzzySearchProvinces('Ha Noi', {
@@ -231,7 +231,7 @@ import {
 	exportWards,
 	exportFlattenedAddresses,
 	exportHierarchicalData,
-} from 'vietnam-provinces-js/export';
+} from 'new-vn-provinces/export';
 
 // Export to different formats
 const jsonData = await exportProvinces({ format: 'json' });
@@ -280,10 +280,10 @@ const flatData = await exportFlattenedAddresses({
 
 ```typescript
 // ✅ Good - Only loads province data
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getAllProvince } from 'new-vn-provinces/provinces';
 
 // ❌ Avoid - Loads all modules
-import * as VietnamProvinces from 'vietnam-provinces-js';
+import * as VietnamProvinces from 'new-vn-provinces';
 ```
 
 ### 2. **Leverage Caching**
@@ -334,17 +334,17 @@ const universal = await universalFuzzySearch('Hanoi');
 
 ```typescript
 // ✅ For analytics/statistics
-import { getNationalStats } from 'vietnam-provinces-js/analytics';
+import { getNationalStats } from 'new-vn-provinces/analytics';
 
 // ✅ For data validation
-import { validateAddressHierarchy } from 'vietnam-provinces-js/validation';
+import { validateAddressHierarchy } from 'new-vn-provinces/validation';
 
 // ✅ For data export
-import { exportProvinces } from 'vietnam-provinces-js/export';
+import { exportProvinces } from 'new-vn-provinces/export';
 
 // ✅ Only import what you need
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getWardById } from 'vietnam-provinces-js/wards';
+import { getAllProvince } from 'new-vn-provinces/provinces';
+import { getWardById } from 'new-vn-provinces/wards';
 ```
 
 ## 🔧 Migration Guide
@@ -369,10 +369,10 @@ You can migrate gradually by updating one module at a time:
 
 ```typescript
 // Update provinces first
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getAllProvince } from 'new-vn-provinces/provinces';
 
 // Update wards next
-import { getAllWards } from 'vietnam-provinces-js/wards';
+import { getAllWards } from 'new-vn-provinces/wards';
 ```
 
 ### v3.0.0 Updates

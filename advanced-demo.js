@@ -1,4 +1,4 @@
-// Advanced demo script showcasing all new features of vietnam-provinces-js
+// Advanced demo script showcasing all new features of new-vn-provinces
 const {
 	getProvinceStats,
 	getNationalStats,

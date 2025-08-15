@@ -149,24 +149,24 @@ const district = await getDistrictById('001');
 
 ```typescript
 // ✅ Recommended - Tree-shakable
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getDistrictById } from 'vietnam-provinces-js/districts';
+import { getAllProvince } from 'new-vn-provinces/provinces';
+import { getDistrictById } from 'new-vn-provinces/districts';
 
 // ❌ Still works but loads everything
-import * as VietnamProvinces from 'vietnam-provinces-js';
+import * as VietnamProvinces from 'new-vn-provinces';
 ```
 
 ### 📦 New Export Modules
 
-- `vietnam-provinces-js/analytics` - Analytics and statistics
-- `vietnam-provinces-js/validation` - Validation utilities
-- `vietnam-provinces-js/export` - Multi-format export
-- `vietnam-provinces-js/fuzzy` - Advanced fuzzy search
-- `vietnam-provinces-js/hierarchy` - Hierarchical navigation
-- `vietnam-provinces-js/batch` - Batch operations
-- `vietnam-provinces-js/autocomplete` - Smart autocomplete
-- `vietnam-provinces-js/utils` - Performance utilities
-- `vietnam-provinces-js/cache` - Caching system
+- `new-vn-provinces/analytics` - Analytics and statistics
+- `new-vn-provinces/validation` - Validation utilities
+- `new-vn-provinces/export` - Multi-format export
+- `new-vn-provinces/fuzzy` - Advanced fuzzy search
+- `new-vn-provinces/hierarchy` - Hierarchical navigation
+- `new-vn-provinces/batch` - Batch operations
+- `new-vn-provinces/autocomplete` - Smart autocomplete
+- `new-vn-provinces/utils` - Performance utilities
+- `new-vn-provinces/cache` - Caching system
 
 ### 🧪 Testing & Quality
 

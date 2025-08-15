@@ -2,7 +2,7 @@
 
 ## 📦 Package Information
 
-- **Package Name**: `vietnam-provinces-js`
+- **Package Name**: `new-vn-provinces`
 - **Version**: `3.0.0`
 - **Published**: August 12, 2025
 - **Registry**: https://registry.npmjs.org/
@@ -12,9 +12,9 @@
 
 ## 🔗 NPM Links
 
-- **Package Page**: https://www.npmjs.com/package/vietnam-provinces-js
-- **Install Command**: `npm install vietnam-provinces-js@3.0.0`
-- **GitHub Repository**: https://github.com/tnmod/vietnam-provinces-js
+- **Package Page**: https://www.npmjs.com/package/new-vn-provinces
+- **Install Command**: `npm install new-vn-provinces@3.0.0`
+- **GitHub Repository**: https://github.com/phanhotboy/new-vn-provinces
 
 ## ✅ Verification Results
 
@@ -73,20 +73,20 @@ Users can now import specific modules for optimal performance:
 
 ```typescript
 // Core modules
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getWardById } from 'vietnam-provinces-js/wards';
+import { getAllProvince } from 'new-vn-provinces/provinces';
+import { getWardById } from 'new-vn-provinces/wards';
 
 // Advanced features
-import { getNationalStats } from 'vietnam-provinces-js/analytics';
-import { validateAddressHierarchy } from 'vietnam-provinces-js/validation';
-import { exportProvinces } from 'vietnam-provinces-js/export';
-import { fuzzySearchProvinces } from 'vietnam-provinces-js/fuzzy';
-import { getProvinceAutocomplete } from 'vietnam-provinces-js/autocomplete';
-import { getFullHierarchy } from 'vietnam-provinces-js/hierarchy';
-import { getProvincesBatch } from 'vietnam-provinces-js/batch';
+import { getNationalStats } from 'new-vn-provinces/analytics';
+import { validateAddressHierarchy } from 'new-vn-provinces/validation';
+import { exportProvinces } from 'new-vn-provinces/export';
+import { fuzzySearchProvinces } from 'new-vn-provinces/fuzzy';
+import { getProvinceAutocomplete } from 'new-vn-provinces/autocomplete';
+import { getFullHierarchy } from 'new-vn-provinces/hierarchy';
+import { getProvincesBatch } from 'new-vn-provinces/batch';
 
 // Utilities
-import { normalizeText, memoize } from 'vietnam-provinces-js/utils';
+import { normalizeText, memoize } from 'new-vn-provinces/utils';
 ```
 
 ## 💥 Breaking Changes
@@ -113,20 +113,20 @@ const provinces = await getAllProvince();
 - **Dependencies**: 3 (natural-compare, remove-accents, similarity)
 - **Keywords**: 16 relevant keywords for discoverability
 - **License**: MIT
-- **Maintainer**: tnmod <nguyenphutin.dev@gmail.com>
+- **Maintainer**: phanhotboy <nguyenphutin.dev@gmail.com>
 
 ## 🎯 Next Steps for Users
 
 ### Installation
 
 ```bash
-npm install vietnam-provinces-js@3.0.0
+npm install new-vn-provinces@3.0.0
 ```
 
 ### Basic Usage
 
 ```typescript
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getAllProvince } from 'new-vn-provinces/provinces';
 
 const provinces = await getAllProvince();
 console.log(`Found ${provinces.length} provinces`);
@@ -136,23 +136,23 @@ console.log(`Found ${provinces.length} provinces`);
 
 ```typescript
 // Get comprehensive statistics
-import { getNationalStats } from 'vietnam-provinces-js/analytics';
+import { getNationalStats } from 'new-vn-provinces/analytics';
 const stats = await getNationalStats();
 
 // Validate addresses (province -> ward)
-import { validateAddressHierarchy } from 'vietnam-provinces-js/validation';
+import { validateAddressHierarchy } from 'new-vn-provinces/validation';
 const isValid = await validateAddressHierarchy('01', '26734');
 
 // Export data
-import { exportProvinces } from 'vietnam-provinces-js/export';
+import { exportProvinces } from 'new-vn-provinces/export';
 const csvData = await exportProvinces({ format: 'csv' });
 
 // Fuzzy search
-import { universalFuzzySearch } from 'vietnam-provinces-js/fuzzy';
+import { universalFuzzySearch } from 'new-vn-provinces/fuzzy';
 const results = await universalFuzzySearch('Ha Noi');
 
 // Ward operations
-import { getWardById } from 'vietnam-provinces-js/wards';
+import { getWardById } from 'new-vn-provinces/wards';
 const ward = await getWardById('26734');
 ```
 
@@ -166,7 +166,7 @@ const ward = await getWardById('26734');
 
 ## 🏆 Achievement Summary
 
-✅ **Successfully published** vietnam-provinces-js v3.0.0 to npm ✅ **Updated
+✅ **Successfully published** new-vn-provinces v3.0.0 to npm ✅ **Updated
 administrative data** with 34 provinces and 3321 wards ✅ **Maintained 10-100x
 performance improvements** from v2.0.0 ✅ **Enhanced data accuracy** after
 administrative merging ✅ **Preserved all advanced features** and backward

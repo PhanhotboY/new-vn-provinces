@@ -1,10 +1,10 @@
 {
-	"name": "vietnam-provinces-js",
-	"version": "2.0.0",
+	"name": "new-vn-provinces",
+	"version": "3.0.1",
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
-	"description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 63 provinces, 696 districts, and 10,051 communes with lazy loading and O(1) lookups.",
+	"description": "High-performance Vietnam administrative data library with advanced search, analytics, validation, and export features. Includes 34 provinces, and 3221 wards with lazy loading and O(1) lookups.",
 	"files": [
 		"dist"
 	],
@@ -108,15 +108,15 @@
 		"lazy-loading",
 		"tree-shaking"
 	],
-	"author": "tnmod",
+	"author": "PhanhotboY",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/tnmod/vietnam-provinces-js"
+		"url": "https://github.com/phanhotboy/new-vn-provinces"
 	},
 	"bugs": {
-		"url": "https://github.com/tnmod/vietnam-provinces-js/issues"
+		"url": "https://github.com/phanhotboy/new-vn-provinces/issues"
 	},
-	"homepage": "https://github.com/tnmod/vietnam-provinces-js#readme",
+	"homepage": "https://github.com/phanhotboy/new-vn-provinces#readme",
 	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }

@@ -5,9 +5,9 @@ that provides a comprehensive list of provinces and wards in Vietnam. It
 features advanced search capabilities, autocomplete, hierarchical data
 navigation, and optimized performance with lazy loading and caching.
 
-[![NPM Version](https://img.shields.io/npm/v/vietnam-provinces-js)](https://www.npmjs.com/package/vietnam-provinces-js)
-[![License](https://img.shields.io/npm/l/vietnam-provinces-js)](https://github.com/tnmod/vietnam-provinces-js/blob/main/LICENSE)
-[![GitHub Issues](https://img.shields.io/github/issues/tnmod/vietnam-provinces-js)](https://github.com/tnmod/vietnam-provinces-js/issues)
+[![NPM Version](https://img.shields.io/npm/v/new-vn-provinces)](https://www.npmjs.com/package/new-vn-provinces)
+[![License](https://img.shields.io/npm/l/new-vn-provinces)](https://github.com/phanhotboy/new-vn-provinces/blob/main/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/phanhotboy/new-vn-provinces)](https://github.com/phanhotboy/new-vn-provinces/issues)
 
 ## 🚀 Performance Highlights
 
@@ -25,12 +25,12 @@ You can install this library via **npm** or **yarn**:
 
 ```sh
 # Using npm
-npm install vietnam-provinces-js
+npm install new-vn-provinces
 ```
 
 ```sh
 # Using yarn
-yarn add vietnam-provinces-js
+yarn add new-vn-provinces
 ```
 
 ---
@@ -74,7 +74,7 @@ yarn add vietnam-provinces-js
 import {
 	getAllProvince,
 	searchProvinceByName,
-} from 'vietnam-provinces-js/provinces';
+} from 'new-vn-provinces/provinces';
 
 // All functions are now async
 const provinces = await getAllProvince();
@@ -103,7 +103,7 @@ console.log(results);
 #### 📌 **Example Usage**
 
 ```ts
-import { getAllWards, getWardById } from 'vietnam-provinces-js/wards';
+import { getAllWards, getWardById } from 'new-vn-provinces/wards';
 
 const wards = await getAllWards();
 console.log(wards);
@@ -131,7 +131,7 @@ import {
 	getProvinceAutocomplete,
 	getWardAutocomplete,
 	getUniversalAutocomplete,
-} from 'vietnam-provinces-js/features/autocomplete';
+} from 'new-vn-provinces/features/autocomplete';
 
 // Province autocomplete
 const suggestions = await getProvinceAutocomplete('Hà', 5);
@@ -154,7 +154,7 @@ import {
 	getProvinceWithWards,
 	getAddressPath,
 	getFormattedAddress,
-} from 'vietnam-provinces-js/features/hierarchy';
+} from 'new-vn-provinces/features/hierarchy';
 
 // Get province with all its wards
 const hanoi = await getProvinceWithWards('01');
@@ -177,7 +177,7 @@ import {
 	getProvincesBatch,
 	getWardsBatch,
 	getFullAddressesBatch,
-} from 'vietnam-provinces-js/features/batch';
+} from 'new-vn-provinces/features/batch';
 
 // Get multiple provinces at once
 const result = await getProvincesBatch(['01', '79', '31']);
@@ -201,7 +201,7 @@ import {
 	getNationalStats,
 	getRegionStats,
 	getTopProvincesByWards,
-} from 'vietnam-provinces-js/features/analytics';
+} from 'new-vn-provinces/features/analytics';
 
 // Get detailed province statistics
 const hanoiStats = await getProvinceStats('01');
@@ -224,7 +224,7 @@ import {
 	validateAddressHierarchy,
 	validateAndSuggestAddress,
 	batchValidateAddresses,
-} from 'vietnam-provinces-js/features/validation';
+} from 'new-vn-provinces/features/validation';
 
 // Validate complete address hierarchy (province -> ward)
 const result = await validateAddressHierarchy('01', '26734');
@@ -248,7 +248,7 @@ import {
 	exportWards,
 	exportFlattenedAddresses,
 	exportHierarchicalData,
-} from 'vietnam-provinces-js/features/export';
+} from 'new-vn-provinces/features/export';
 
 // Export to different formats
 const jsonData = await exportProvinces({ format: 'json' });
@@ -279,7 +279,7 @@ import {
 	fuzzySearchWards,
 	universalFuzzySearch,
 	suggestCorrections,
-} from 'vietnam-provinces-js/features/fuzzy';
+} from 'new-vn-provinces/features/fuzzy';
 
 // Advanced fuzzy search with scoring
 const results = await fuzzySearchProvinces('Ha Noi', {
@@ -346,12 +346,12 @@ const ward = await getWardById('00004');
 ### **Basic Usage**
 
 ```bash
-npm install vietnam-provinces-js
+npm install new-vn-provinces
 ```
 
 ```typescript
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getWardById } from 'vietnam-provinces-js/wards';
+import { getAllProvince } from 'new-vn-provinces/provinces';
+import { getWardById } from 'new-vn-provinces/wards';
 
 const provinces = await getAllProvince();
 const ward = await getWardById('26734');
@@ -361,19 +361,19 @@ const ward = await getWardById('26734');
 
 ```typescript
 // Analytics
-import { getNationalStats } from 'vietnam-provinces-js/features/analytics';
+import { getNationalStats } from 'new-vn-provinces/features/analytics';
 const stats = await getNationalStats();
 
 // Validation
-import { validateAddressHierarchy } from 'vietnam-provinces-js/features/validation';
+import { validateAddressHierarchy } from 'new-vn-provinces/features/validation';
 const isValid = await validateAddressHierarchy('01', '26734');
 
 // Export
-import { exportProvinces } from 'vietnam-provinces-js/features/export';
+import { exportProvinces } from 'new-vn-provinces/features/export';
 const csvData = await exportProvinces({ format: 'csv' });
 
 // Fuzzy Search
-import { universalFuzzySearch } from 'vietnam-provinces-js/features/fuzzy';
+import { universalFuzzySearch } from 'new-vn-provinces/features/fuzzy';
 const results = await universalFuzzySearch('Ha Noi');
 ```
 
@@ -397,10 +397,10 @@ const results = await universalFuzzySearch('Ha Noi');
 
 ## 🔗 **Important Links**
 
-- **📦 NPM Package**: https://www.npmjs.com/package/vietnam-provinces-js
-- **📚 GitHub Repository**: https://github.com/tnmod/vietnam-provinces-js
+- **📦 NPM Package**: https://www.npmjs.com/package/new-vn-provinces
+- **📚 GitHub Repository**: https://github.com/phanhotboy/new-vn-provinces
 - **📖 Documentation**: Complete guides and examples included
-- **🐛 Issues**: https://github.com/tnmod/vietnam-provinces-js/issues
+- **🐛 Issues**: https://github.com/phanhotboy/new-vn-provinces/issues
 - **📝 Changelog**: [CHANGELOG.md](./CHANGELOG.md)
 
 ## 📞 **Support & Contributing**
@@ -408,6 +408,6 @@ const results = await universalFuzzySearch('Ha Noi');
 - **Issues**: Report bugs or request features on GitHub
 - **Contributions**: Pull requests are welcome
 - **License**: MIT License
-- **Author**: tnmod <nguyenphutin.dev@gmail.com>
+- **Author**: phanhotboy <nguyenphutin.dev@gmail.com>
 
 ---

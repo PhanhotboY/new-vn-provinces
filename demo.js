@@ -1,4 +1,4 @@
-// Demo script to showcase the optimized vietnam-provinces-js library
+// Demo script to showcase the optimized new-vn-provinces library
 const {
 	getAllProvince,
 	getAllProvincesSorted,

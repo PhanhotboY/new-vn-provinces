@@ -48,7 +48,7 @@ import {
 	getNationalStats,
 	getRegionStats,
 	getTopProvincesByWards,
-} from 'vietnam-provinces-js/analytics';
+} from 'new-vn-provinces/analytics';
 
 // Get detailed province statistics
 const hanoiStats = await getProvinceStats('01');
@@ -70,7 +70,7 @@ import {
 	validateAndSuggestAddress,
 	batchValidateAddresses,
 	validateAddressFormat,
-} from 'vietnam-provinces-js/validation';
+} from 'new-vn-provinces/validation';
 
 // Validate complete address hierarchy
 const result = await validateAddressHierarchy('01', '26734');
@@ -92,7 +92,7 @@ import {
 	exportWards,
 	exportFlattenedAddresses,
 	exportHierarchicalData,
-} from 'vietnam-provinces-js/export';
+} from 'new-vn-provinces/export';
 
 // Export to multiple formats
 const jsonData = await exportProvinces({ format: 'json' });
@@ -122,7 +122,7 @@ import {
 	universalFuzzySearch,
 	findSimilarNames,
 	suggestCorrections,
-} from 'vietnam-provinces-js/fuzzy';
+} from 'new-vn-provinces/fuzzy';
 
 // Advanced fuzzy search with scoring
 const results = await fuzzySearchProvinces('Ha Noi', {
@@ -159,7 +159,7 @@ import {
 	getAddressPath,
 	getFormattedAddress,
 	validateAddressHierarchy,
-} from 'vietnam-provinces-js/hierarchy';
+} from 'new-vn-provinces/hierarchy';
 
 // Get province with all wards
 const hanoi = await getProvinceWithWards('01');
@@ -184,7 +184,7 @@ import {
 	getWardsBatch,
 	getFullAddressesBatch,
 	getProvinceStatsBatch,
-} from 'vietnam-provinces-js/batch';
+} from 'new-vn-provinces/batch';
 
 // Process multiple items efficiently
 const provinces = await getProvincesBatch(['01', '79', '31']);
@@ -207,7 +207,7 @@ import {
 	getProvinceAutocomplete,
 	getWardAutocomplete,
 	getUniversalAutocomplete,
-} from 'vietnam-provinces-js/autocomplete';
+} from 'new-vn-provinces/autocomplete';
 
 // Smart autocomplete with scoring
 const suggestions = await getProvinceAutocomplete('Hà', 5);
@@ -238,11 +238,11 @@ const ward = await getWardById('26734');
 
 ```typescript
 // ✅ Recommended - Tree-shakable
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
-import { getWardById } from 'vietnam-provinces-js/wards';
+import { getAllProvince } from 'new-vn-provinces/provinces';
+import { getWardById } from 'new-vn-provinces/wards';
 
 // ❌ Avoid - Loads everything
-import * as VietnamProvinces from 'vietnam-provinces-js';
+import * as VietnamProvinces from 'new-vn-provinces';
 ```
 
 ## 📈 Real-World Performance Results
@@ -271,10 +271,10 @@ import * as VietnamProvinces from 'vietnam-provinces-js';
 
 ```typescript
 // ✅ Good - Only loads province module
-import { getAllProvince } from 'vietnam-provinces-js/provinces';
+import { getAllProvince } from 'new-vn-provinces/provinces';
 
 // ❌ Avoid - Loads all modules
-import { getAllProvince } from 'vietnam-provinces-js';
+import { getAllProvince } from 'new-vn-provinces';
 ```
 
 ### **2. Leverage Caching**
