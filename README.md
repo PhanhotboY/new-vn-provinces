@@ -408,6 +408,6 @@ const results = await universalFuzzySearch('Ha Noi');
 - **Issues**: Report bugs or request features on GitHub
 - **Contributions**: Pull requests are welcome
 - **License**: MIT License
-- **Author**: phanhotboy <nguyenphutin.dev@gmail.com>
+- **Author**: phanhotboy <nguyenduyphan2003@gmail.com>
 
 ---

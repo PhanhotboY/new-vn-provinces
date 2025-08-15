@@ -113,7 +113,7 @@ const provinces = await getAllProvince();
 - **Dependencies**: 3 (natural-compare, remove-accents, similarity)
 - **Keywords**: 16 relevant keywords for discoverability
 - **License**: MIT
-- **Maintainer**: phanhotboy <nguyenphutin.dev@gmail.com>
+- **Maintainer**: phanhotboy <nguyenduyphan2003@gmail.com>
 
 ## 🎯 Next Steps for Users
 
